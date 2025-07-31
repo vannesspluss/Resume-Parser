@@ -5,9 +5,10 @@ langchain-community
 langchain-openai
 pypdf
 python-docx
+textract
 pillow
 pytesseract
-textract
+easyocr
 python-multipart
 email-validator
 jinja2

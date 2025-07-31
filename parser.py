@@ -160,14 +160,6 @@ def extract_text_from_docx(file_path: str) -> str:
     doc = Document(file_path)
     return "\n".join([para.text for para in doc.paragraphs])
 
-def extract_text_from_doc(file_path: str) -> str:
-    try:
-        text = textract.process(file_path).decode("utf-8")
-        return text
-    except Exception as e:
-        print(f"[DOC] Failed to extract text from .doc: {e}")
-        return ""
-
 def clean_invalid_emails(text: str) -> str:
     pattern = r'\b[\w\.-]+@[\w\.-]+\.\w+\b'
     matches = re.findall(pattern, text)
@@ -219,8 +211,6 @@ def extract_text(file_path: str) -> str:
         return extract_text_from_pdf(file_path)
     elif ext == ".docx":
         return extract_text_from_docx(file_path)
-    elif ext == ".doc":
-        return extract_text_from_doc(file_path)
     elif ext in [".jpg", ".jpeg", ".png"]:
         return extract_text_from_image(file_path)
     else:

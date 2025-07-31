@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-ALLOWED_EXTENSIONS = [".pdf", ".doc", ".docx", ".png", ".jpg", ".jpeg"]
+ALLOWED_EXTENSIONS = [".pdf", ".docx", ".png", ".jpg", ".jpeg"]
 
 @app.get("/")
 def root():

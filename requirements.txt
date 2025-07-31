@@ -5,7 +5,6 @@ langchain-community
 langchain-openai
 pypdf
 python-docx
-textract
 pillow
 pytesseract
 easyocr

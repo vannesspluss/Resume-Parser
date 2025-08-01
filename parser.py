@@ -77,6 +77,10 @@ IMPORTANT:
 - Preserve all content exactly in the language it appears (Thai or English).
 - Extract values into the Resume class **using the original language of each field**.
 
+Additional rules:
+- Trim excessive whitespace, remove duplicated data, and ignore formatting symbols (like • or ·) that do not carry meaning.
+- Ignore stray numbers or letters that have no meaning in the sentence (e.g., list numbering that doesn't match context, or isolated characters).
+
 Resume Detail:
 {resume_text}
 """
